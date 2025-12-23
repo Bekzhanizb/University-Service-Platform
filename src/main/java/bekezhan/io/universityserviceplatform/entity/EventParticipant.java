@@ -29,7 +29,7 @@ public class EventParticipant {
     public enum ParticipantStatus {
         REGISTERED,
         ATTENDED,
-        NOSHOW
+        ABSENT
     }
 
 }
