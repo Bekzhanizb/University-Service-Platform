@@ -1,9 +1,9 @@
 package bekezhan.io.universityserviceplatform.repository;
 
-import bekezhan.io.universityserviceplatform.entity.StudentProfile;
+import bekezhan.io.universityserviceplatform.entity.UniversityEvent;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface StudentRepository extends JpaRepository<StudentProfile, Long> {
+public interface UniversityEventRepository extends JpaRepository<UniversityEvent, Long> {
 }
