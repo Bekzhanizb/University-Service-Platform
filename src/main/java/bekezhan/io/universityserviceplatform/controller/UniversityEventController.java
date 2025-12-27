@@ -1,6 +1,6 @@
 package bekezhan.io.universityserviceplatform.controller;
 
-import bekezhan.io.universityserviceplatform.dto.UniversityEventDTO;
+import bekezhan.io.universityserviceplatform.dto.UniversityEventRequestDTO;
 import bekezhan.io.universityserviceplatform.entity.UniversityEvent;
 import bekezhan.io.universityserviceplatform.service.UniversityEventService;
 import lombok.RequiredArgsConstructor;
@@ -18,7 +18,7 @@ public class UniversityEventController {
 
     @PostMapping
     public ResponseEntity<UniversityEvent> createEvent(
-            @RequestBody UniversityEventDTO dto,
+            @RequestBody UniversityEventRequestDTO dto,
             @RequestParam Long createdById) {
         return ResponseEntity.ok(eventService.createEvent(dto, createdById));
     }

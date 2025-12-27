@@ -1,6 +1,6 @@
 package bekezhan.io.universityserviceplatform.controller;
 
-import bekezhan.io.universityserviceplatform.dto.RequestCommentDTO;
+import bekezhan.io.universityserviceplatform.dto.RequestCommentRequestDTO;
 import bekezhan.io.universityserviceplatform.entity.RequestComment;
 import bekezhan.io.universityserviceplatform.service.RequestCommentService;
 import lombok.RequiredArgsConstructor;
@@ -18,7 +18,7 @@ public class RequestCommentController {
 
     @PostMapping
     public ResponseEntity<RequestComment> addComment(
-            @RequestBody RequestCommentDTO dto,
+            @RequestBody RequestCommentRequestDTO dto,
             @RequestParam Long userId) {
         return ResponseEntity.ok(commentService.addComment(dto, userId));
     }

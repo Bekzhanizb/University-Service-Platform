@@ -1,6 +1,6 @@
 package bekezhan.io.universityserviceplatform.service;
 
-import bekezhan.io.universityserviceplatform.dto.UniversityEventDTO;
+import bekezhan.io.universityserviceplatform.dto.UniversityEventRequestDTO;
 import bekezhan.io.universityserviceplatform.entity.*;
 import bekezhan.io.universityserviceplatform.repository.*;
 import lombok.RequiredArgsConstructor;
@@ -17,7 +17,7 @@ public class UniversityEventService {
     private final UserRepository userRepository;
 
     @Transactional
-    public UniversityEvent createEvent(UniversityEventDTO dto, Long createdById) {
+    public UniversityEvent createEvent(UniversityEventRequestDTO dto, Long createdById) {
         User creator = userRepository.findById(createdById)
                 .orElseThrow(() -> new RuntimeException("User not found"));
 

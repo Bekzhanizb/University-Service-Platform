@@ -9,7 +9,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class RequestCommentDTO {
+public class RequestCommentRequestDTO {
     private Long requestId;
     private String message;
 }

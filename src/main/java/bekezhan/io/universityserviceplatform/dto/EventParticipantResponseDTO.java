@@ -7,7 +7,7 @@ import lombok.*;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class EventParticipantDTO {
+public class EventParticipantResponseDTO {
     private Long id;
     private Long eventId;
     private Long userId;

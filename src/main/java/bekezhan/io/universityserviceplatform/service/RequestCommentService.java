@@ -1,6 +1,6 @@
 package bekezhan.io.universityserviceplatform.service;
 
-import bekezhan.io.universityserviceplatform.dto.RequestCommentDTO;
+import bekezhan.io.universityserviceplatform.dto.RequestCommentRequestDTO;
 import bekezhan.io.universityserviceplatform.entity.*;
 import bekezhan.io.universityserviceplatform.repository.*;
 import lombok.RequiredArgsConstructor;
@@ -20,7 +20,7 @@ public class RequestCommentService {
     private final NotificationService notificationService;
 
     @Transactional
-    public RequestComment addComment(RequestCommentDTO dto, Long userId) {
+    public RequestComment addComment(RequestCommentRequestDTO dto, Long userId) {
         ServiceRequest request = requestRepository.findById(dto.getRequestId())
                 .orElseThrow(() -> new RuntimeException("Request not found"));
 

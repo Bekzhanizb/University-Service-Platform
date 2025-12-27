@@ -7,7 +7,7 @@ import lombok.*;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class UniversityEventDTO {
+public class UniversityEventRequestDTO {
     private String title;
     private String description;
     private LocalDateTime startDate;

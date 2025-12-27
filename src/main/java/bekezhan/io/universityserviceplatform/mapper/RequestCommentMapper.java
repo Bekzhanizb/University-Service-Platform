@@ -1,6 +1,6 @@
 package bekezhan.io.universityserviceplatform.mapper;
 
-import bekezhan.io.universityserviceplatform.dto.RequestCommentDTO;
+import bekezhan.io.universityserviceplatform.dto.RequestCommentRequestDTO;
 import bekezhan.io.universityserviceplatform.entity.RequestComment;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
@@ -9,8 +9,8 @@ import org.mapstruct.Mapping;
 public interface RequestCommentMapper {
 
     @Mapping(source = "request.id", target = "requestId")
-    RequestCommentDTO toDTO(RequestComment entity);
+    RequestCommentRequestDTO toDTO(RequestComment entity);
 
     @Mapping(source = "requestId", target = "request.id")
-    RequestComment toEntity(RequestCommentDTO dto);
+    RequestComment toEntity(RequestCommentRequestDTO dto);
 }
