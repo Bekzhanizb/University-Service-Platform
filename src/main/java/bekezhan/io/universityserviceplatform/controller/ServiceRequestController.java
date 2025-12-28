@@ -2,7 +2,7 @@ package bekezhan.io.universityserviceplatform.controller;
 
 import bekezhan.io.universityserviceplatform.dto.ServiceRequestDTO;
 import bekezhan.io.universityserviceplatform.entity.ServiceRequest;
-import bekezhan.io.universityserviceplatform.service.ServiceRequestService;
+import bekezhan.io.universityserviceplatform.service.implementatoins.ServiceRequestService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

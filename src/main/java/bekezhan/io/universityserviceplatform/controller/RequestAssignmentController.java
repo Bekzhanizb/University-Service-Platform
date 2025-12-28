@@ -1,7 +1,7 @@
 package bekezhan.io.universityserviceplatform.controller;
 
 import bekezhan.io.universityserviceplatform.entity.RequestAssignment;
-import bekezhan.io.universityserviceplatform.service.RequestAssignmentService;
+import bekezhan.io.universityserviceplatform.service.implementatoins.RequestAssignmentService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

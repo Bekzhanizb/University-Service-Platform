@@ -1,7 +1,7 @@
 package bekezhan.io.universityserviceplatform.controller;
 
 import bekezhan.io.universityserviceplatform.entity.EventParticipant;
-import bekezhan.io.universityserviceplatform.service.EventParticipantService;
+import bekezhan.io.universityserviceplatform.service.implementatoins.EventParticipantService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

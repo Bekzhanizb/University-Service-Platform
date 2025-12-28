@@ -2,7 +2,7 @@ package bekezhan.io.universityserviceplatform.controller;
 
 import bekezhan.io.universityserviceplatform.dto.UserRequestDTO;
 import bekezhan.io.universityserviceplatform.dto.UserResponseDTO;
-import bekezhan.io.universityserviceplatform.service.UserService;
+import bekezhan.io.universityserviceplatform.service.implementatoins.UserServiceImpl;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.*;
 @RequiredArgsConstructor
 public class UserController {
 
-    private final UserService userService;
+    private final UserServiceImpl userService;
 
     @PostMapping("/register")
     public ResponseEntity<UserResponseDTO> register(@RequestBody UserRequestDTO dto) {

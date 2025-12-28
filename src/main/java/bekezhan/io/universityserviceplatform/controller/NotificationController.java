@@ -1,7 +1,7 @@
 package bekezhan.io.universityserviceplatform.controller;
 
 import bekezhan.io.universityserviceplatform.entity.Notification;
-import bekezhan.io.universityserviceplatform.service.NotificationService;
+import bekezhan.io.universityserviceplatform.service.implementatoins.NotificationService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

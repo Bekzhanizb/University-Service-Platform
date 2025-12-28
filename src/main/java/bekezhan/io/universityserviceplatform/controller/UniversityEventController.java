@@ -2,7 +2,7 @@ package bekezhan.io.universityserviceplatform.controller;
 
 import bekezhan.io.universityserviceplatform.dto.UniversityEventRequestDTO;
 import bekezhan.io.universityserviceplatform.entity.UniversityEvent;
-import bekezhan.io.universityserviceplatform.service.UniversityEventService;
+import bekezhan.io.universityserviceplatform.service.implementatoins.UniversityEventServiceImpl;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -14,7 +14,7 @@ import java.util.List;
 @RequiredArgsConstructor
 public class UniversityEventController {
 
-    private final UniversityEventService eventService;
+    private final UniversityEventServiceImpl eventService;
 
     @PostMapping
     public ResponseEntity<UniversityEvent> createEvent(

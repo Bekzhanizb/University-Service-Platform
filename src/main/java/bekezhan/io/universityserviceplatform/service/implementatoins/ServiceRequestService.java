@@ -1,4 +1,4 @@
-package bekezhan.io.universityserviceplatform.service;
+package bekezhan.io.universityserviceplatform.service.implementatoins;
 
 import bekezhan.io.universityserviceplatform.dto.ServiceRequestDTO;
 import bekezhan.io.universityserviceplatform.entity.*;
