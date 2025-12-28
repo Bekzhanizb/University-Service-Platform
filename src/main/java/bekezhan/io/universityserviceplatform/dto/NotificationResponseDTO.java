@@ -6,8 +6,7 @@ import lombok.*;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class NotificationDTO {
-    private Long id;
+public class NotificationResponseDTO {
     private String message;
     private Boolean isRead;
 }
