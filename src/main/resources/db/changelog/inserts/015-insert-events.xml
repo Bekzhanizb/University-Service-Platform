@@ -45,7 +45,7 @@
         <insert tableName="university_events">
             <column name="id" value="5"/>
             <column name="title" value="Study Abroad Information Session"/>
-            <column name="description" value="Learn about student exchange programs and study abroad opportunities in Europe, Asia, and USA. Representatives from partner universities will present available programs, scholarships, and application procedures. Q&A session included. Perfect for students planning international experience."/>
+            <column name="description" value="Learn about student exchange programs and study abroad opportunities in Europe, Asia, and USA. Representatives from partner universities will present available programs, scholarships, and application procedures. QA session included. Perfect for students planning international experience."/>
             <column name="start_date" valueDate="2025-01-25T15:00:00"/>
             <column name="end_date" valueDate="2025-01-25T17:00:00"/>
             <column name="created_by" value="1"/>
