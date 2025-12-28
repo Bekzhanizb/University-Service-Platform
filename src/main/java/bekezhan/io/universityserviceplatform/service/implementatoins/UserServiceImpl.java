@@ -49,4 +49,22 @@ public class UserServiceImpl implements UserService {
         return userRepository.findByEmail(email)
                 .orElseThrow(() -> new RuntimeException("User not found"));
     }
+
+    @Override
+    @Transactional
+    public void blockUser(Long id) {
+        User user = userRepository.findById(id)
+                .orElseThrow(() -> new RuntimeException("User not found"));
+        user.setIsBlocked(true);
+        userRepository.save(user);
+    }
+
+    @Override
+    @Transactional
+    public void unblockUser(Long id) {
+        User user = userRepository.findById(id)
+                .orElseThrow(() -> new RuntimeException("User not found"));
+        user.setIsBlocked(false);
+        userRepository.save(user);
+    }
 }

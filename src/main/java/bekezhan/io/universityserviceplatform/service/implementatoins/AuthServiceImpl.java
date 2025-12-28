@@ -1,5 +1,7 @@
 package bekezhan.io.universityserviceplatform.service.implementatoins;
 
+import bekezhan.io.universityserviceplatform.dto.ChangePasswordRequestDTO;
+import bekezhan.io.universityserviceplatform.dto.UpdateUserRequestDTO;
 import bekezhan.io.universityserviceplatform.dto.UserRequestDTO;
 import bekezhan.io.universityserviceplatform.dto.UserResponseDTO;
 import bekezhan.io.universityserviceplatform.entity.User;
@@ -57,9 +59,40 @@ public class AuthServiceImpl implements AuthService {
     @Override
     public User getCurrentUser() {
         Authentication auth = SecurityContextHolder.getContext().getAuthentication();
-        String email = auth.getName();
+        String email = auth != null ? auth.getName() : null;
 
         return userRepository.findByEmail(email)
                 .orElseThrow(() -> new UsernameNotFoundException("User not found"));
+    }
+
+    @Override
+    @Transactional
+    public void changePassword(ChangePasswordRequestDTO dto) {
+        User currentUser = getCurrentUser();
+
+        if (!passwordEncoder.matches(dto.getOldPassword(), currentUser.getPassword())) {
+            throw new RuntimeException("Invalid old password");
+        }
+
+        currentUser.setPassword(passwordEncoder.encode(dto.getNewPassword()));
+        userRepository.save(currentUser);
+    }
+
+    @Override
+    @Transactional
+    public UserResponseDTO updateProfile(UpdateUserRequestDTO dto) {
+        User currentUser = getCurrentUser();
+
+        if (!currentUser.getEmail().equals(dto.getEmail())) {
+            if (userRepository.findByEmail(dto.getEmail()).isPresent()) {
+                throw new RuntimeException("Email already exists");
+            }
+            currentUser.setEmail(dto.getEmail());
+        }
+
+        currentUser.setFullName(dto.getFullName());
+
+        User updated = userRepository.save(currentUser);
+        return userMapper.toResponseDTO(updated);
     }
 }

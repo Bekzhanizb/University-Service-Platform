@@ -21,5 +21,6 @@
     <include file="db/changelog/inserts/013-insert-categories.xml"/>
     <include file="db/changelog/inserts/014-insert-requests.xml"/>
     <include file="db/changelog/inserts/015-insert-events.xml"/>
+    <include file="/db/changelog/modify/29-01-changelog.xml"/>
 
 </databaseChangeLog>

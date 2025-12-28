@@ -32,6 +32,9 @@ public class User {
     @Column(nullable = false)
     private Role role;
 
+    @Column(name = "is_blocked")
+    private Boolean isBlocked = false;
+
     private LocalDateTime createdAt;
 
     public enum Role {
