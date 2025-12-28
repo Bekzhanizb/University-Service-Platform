@@ -2,7 +2,6 @@ package bekezhan.io.universityserviceplatform.controller;
 
 import bekezhan.io.universityserviceplatform.dto.RequestCommentRequestDTO;
 import bekezhan.io.universityserviceplatform.entity.RequestComment;
-import bekezhan.io.universityserviceplatform.service.implementatoins.RequestCommentService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

@@ -1,7 +1,7 @@
 package bekezhan.io.universityserviceplatform.controller;
 
 import bekezhan.io.universityserviceplatform.entity.Notification;
-import bekezhan.io.universityserviceplatform.service.implementatoins.NotificationService;
+import bekezhan.io.universityserviceplatform.service.implementatoins.NotificationServiceImpl;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -13,7 +13,7 @@ import java.util.List;
 @RequiredArgsConstructor
 public class NotificationController {
 
-    private final NotificationService notificationService;
+    private final NotificationServiceImpl notificationService;
 
     @GetMapping("/user/{userId}")
     public ResponseEntity<List<Notification>> getUserNotifications(@PathVariable Long userId) {

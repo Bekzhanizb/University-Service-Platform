@@ -1,7 +1,7 @@
 package bekezhan.io.universityserviceplatform.controller;
 
 import bekezhan.io.universityserviceplatform.entity.EventParticipant;
-import bekezhan.io.universityserviceplatform.service.implementatoins.EventParticipantService;
+import bekezhan.io.universityserviceplatform.service.implementatoins.EventParticipantServiceImpl;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -13,7 +13,7 @@ import java.util.List;
 @RequiredArgsConstructor
 public class EventParticipantController {
 
-    private final EventParticipantService participantService;
+    private final EventParticipantServiceImpl participantService;
 
     @PostMapping
     public ResponseEntity<EventParticipant> registerForEvent(

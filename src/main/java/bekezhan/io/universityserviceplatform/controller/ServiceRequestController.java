@@ -2,7 +2,7 @@ package bekezhan.io.universityserviceplatform.controller;
 
 import bekezhan.io.universityserviceplatform.dto.ServiceRequestDTO;
 import bekezhan.io.universityserviceplatform.entity.ServiceRequest;
-import bekezhan.io.universityserviceplatform.service.implementatoins.ServiceRequestService;
+import bekezhan.io.universityserviceplatform.service.implementatoins.ServiceRequestServiceImpl;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -14,7 +14,7 @@ import java.util.List;
 @RequiredArgsConstructor
 public class ServiceRequestController {
 
-    private final ServiceRequestService requestService;
+    private final ServiceRequestServiceImpl requestService;
 
     @PostMapping
     public ResponseEntity<ServiceRequest> createRequest(
