@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.20.xsd">
+
+    <include file="db/changelog/migrations/001-create-users-table.xml"/>
+    <include file="db/changelog/migrations/002-create-student-profiles-table.xml"/>
+    <include file="db/changelog/migrations/003-create-teacher-profiles-table.xml"/>
+    <include file="db/changelog/migrations/004-create-service-categories-table.xml"/>
+    <include file="db/changelog/migrations/005-create-service-requests-table.xml"/>
+    <include file="db/changelog/migrations/006-create-request-comments-table.xml"/>
+    <include file="db/changelog/migrations/007-create-request-assignments-table.xml"/>
+    <include file="db/changelog/migrations/008-create-university-events-table.xml"/>
+    <include file="db/changelog/migrations/009-create-event-participants-table.xml"/>
+    <include file="db/changelog/migrations/010-create-notifications-table.xml"/>
+
+    <include file="db/changelog/inserts/011-insert-users.xml"/>
+    <include file="db/changelog/inserts/012-insert-profiles.xml"/>
+    <include file="db/changelog/inserts/013-insert-categories.xml"/>
+    <include file="db/changelog/inserts/014-insert-requests.xml"/>
+    <include file="db/changelog/inserts/015-insert-events.xml"/>
+
+</databaseChangeLog>

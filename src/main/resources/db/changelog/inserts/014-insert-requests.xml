@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.20.xsd">
+
+    <changeSet id="014-insert-requests" author="bekezhan">
+        <insert tableName="service_requests">
+            <column name="id" value="1"/>
+            <column name="title" value="Need enrollment certificate for visa extension"/>
+            <column name="description" value="Hello, I need an official enrollment certificate with apostille for extending my residence permit. The document should include information about my current year of study and expected graduation date. Please let me know how long it will take to process."/>
+            <column name="status" value="NEW"/>
+            <column name="student_id" value="1"/>
+            <column name="category_id" value="1"/>
+            <column name="created_at" valueDate="2024-12-15T09:30:00"/>
+        </insert>
+
+        <insert tableName="service_requests">
+            <column name="id" value="2"/>
+            <column name="title" value="Cannot register for Advanced Algorithms course"/>
+            <column name="description" value="I'm trying to register for CSCI 401 Advanced Algorithms, but the system shows an error saying prerequisites are not met. However, I have already completed Data Structures and Algorithms with grade A. Could you please check my academic record and help resolve this issue?"/>
+            <column name="status" value="IN_PROGRESS"/>
+            <column name="student_id" value="2"/>
+            <column name="category_id" value="3"/>
+            <column name="created_at" valueDate="2024-12-10T14:20:00"/>
+        </insert>
+
+        <insert tableName="service_requests">
+            <column name="id" value="3"/>
+            <column name="title" value="Transcript needed for Master's application"/>
+            <column name="description" value="I am applying for Master's program at foreign universities and need an official academic transcript with all my grades from first year until now. The transcript should be in English and certified by the registrar's office. I need it by January 15th for application deadline."/>
+            <column name="status" value="DONE"/>
+            <column name="student_id" value="3"/>
+            <column name="category_id" value="1"/>
+            <column name="created_at" valueDate="2024-11-28T10:15:00"/>
+        </insert>
+
+        <insert tableName="service_requests">
+            <column name="id" value="4"/>
+            <column name="title" value="Consultation about internship credit transfer"/>
+            <column name="description" value="I completed a summer internship at Kaspi.kz and would like to know if I can get academic credits for it. I have all the necessary documents including internship contract and completion certificate. Could we schedule a meeting to discuss this?"/>
+            <column name="status" value="NEW"/>
+            <column name="student_id" value="4"/>
+            <column name="category_id" value="2"/>
+            <column name="created_at" valueDate="2024-12-18T11:45:00"/>
+        </insert>
+
+        <insert tableName="service_requests">
+            <column name="id" value="5"/>
+            <column name="title" value="Information about state scholarship eligibility"/>
+            <column name="description" value="My GPA for this semester is 3.85 and I would like to know if I am eligible for state scholarship next semester. What are the requirements and when is the application deadline? Also, can I apply if I already receive a merit-based scholarship from the university?"/>
+            <column name="status" value="IN_PROGRESS"/>
+            <column name="student_id" value="5"/>
+            <column name="category_id" value="5"/>
+            <column name="created_at" valueDate="2024-12-12T16:00:00"/>
+        </insert>
+
+        <insert tableName="request_comments">
+            <column name="id" value="1"/>
+            <column name="request_id" value="2"/>
+            <column name="user_id" value="2"/>
+            <column name="message" value="I have reviewed your academic record. The issue is that you took Data Structures course in Fall 2022, but the prerequisite policy was updated in Spring 2023. You also need to complete Discrete Mathematics. Please provide your Discrete Math grade transcript."/>
+            <column name="created_at" valueDate="2024-12-11T10:30:00"/>
+        </insert>
+
+        <insert tableName="request_comments">
+            <column name="id" value="2"/>
+            <column name="request_id" value="2"/>
+            <column name="user_id" value="6"/>
+            <column name="message" value="Thank you for clarification! I completed Discrete Mathematics last semester with grade B+. I will upload the grade report to the portal. Is there anything else I need to provide?"/>
+            <column name="created_at" valueDate="2024-12-11T15:20:00"/>
+        </insert>
+
+        <insert tableName="request_comments">
+            <column name="id" value="3"/>
+            <column name="request_id" value="2"/>
+            <column name="user_id" value="2"/>
+            <column name="message" value="Perfect! I can see your Discrete Math grade now. I will manually override the registration block. You should be able to register for Advanced Algorithms within 24 hours. Please try again tomorrow and let me know if you still have issues."/>
+            <column name="created_at" valueDate="2024-12-12T09:15:00"/>
+        </insert>
+
+        <insert tableName="request_comments">
+            <column name="id" value="4"/>
+            <column name="request_id" value="5"/>
+            <column name="user_id" value="3"/>
+            <column name="message" value="Hello Bekzat! To be eligible for state scholarship, you need minimum GPA of 3.50, which you have exceeded. The application period is from January 10-20, 2025. You can apply even if you have university scholarship - they are not mutually exclusive. Please prepare: transcript, recommendation letter from your advisor, and motivation essay."/>
+            <column name="created_at" valueDate="2024-12-13T14:45:00"/>
+        </insert>
+
+        <insert tableName="request_assignments">
+            <column name="id" value="1"/>
+            <column name="request_id" value="2"/>
+            <column name="teacher_id" value="1"/>
+            <column name="assigned_at" valueDate="2024-12-10T16:00:00"/>
+        </insert>
+
+        <insert tableName="request_assignments">
+            <column name="id" value="2"/>
+            <column name="request_id" value="5"/>
+            <column name="teacher_id" value="2"/>
+            <column name="assigned_at" valueDate="2024-12-12T17:30:00"/>
+        </insert>
+
+        <insert tableName="notifications">
+            <column name="id" value="1"/>
+            <column name="user_id" value="5"/>
+            <column name="message" value="Your request 'Need enrollment certificate for visa extension' has been created successfully"/>
+            <column name="is_read" valueBoolean="false"/>
+            <column name="created_at" valueDate="2024-12-15T09:30:00"/>
+        </insert>
+
+        <insert tableName="notifications">
+            <column name="id" value="2"/>
+            <column name="user_id" value="6"/>
+            <column name="message" value="Your request 'Cannot register for Advanced Algorithms course' status changed to: IN_PROGRESS"/>
+            <column name="is_read" valueBoolean="true"/>
+            <column name="created_at" valueDate="2024-12-10T16:00:00"/>
+        </insert>
+
+        <insert tableName="notifications">
+            <column name="id" value="3"/>
+            <column name="user_id" value="6"/>
+            <column name="message" value="New comment on your request 'Cannot register for Advanced Algorithms course'"/>
+            <column name="is_read" valueBoolean="true"/>
+            <column name="created_at" valueDate="2024-12-11T10:30:00"/>
+        </insert>
+
+        <insert tableName="notifications">
+            <column name="id" value="4"/>
+            <column name="user_id" value="7"/>
+            <column name="message" value="Your request 'Transcript needed for Master's application' status changed to: DONE"/>
+            <column name="is_read" valueBoolean="true"/>
+            <column name="created_at" valueDate="2024-12-05T11:20:00"/>
+        </insert>
+
+        <insert tableName="notifications">
+            <column name="id" value="5"/>
+            <column name="user_id" value="9"/>
+            <column name="message" value="Your request 'Information about state scholarship eligibility' has been assigned to advisor"/>
+            <column name="is_read" valueBoolean="false"/>
+            <column name="created_at" valueDate="2024-12-12T17:30:00"/>
+        </insert>
+    </changeSet>
+
+</databaseChangeLog>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.20.xsd">
+
+    <changeSet id="011-insert-users" author="bekezhan">
+        <insert tableName="users">
+            <column name="id" value="1"/>
+            <column name="email" value="askar.bekzhanov@narxoz.kz"/>
+            <column name="password" value="$2a$10$N9qo8uLOickgx2ZMRZoMyeIjZAgcfl7p92ldGxad68LJZdL17lhWy"/>
+            <column name="full_name" value="Askar Bekzhanov"/>
+            <column name="role" value="ADMIN"/>
+            <column name="created_at" valueDate="2023-09-01T09:00:00"/>
+        </insert>
+
+        <insert tableName="users">
+            <column name="id" value="2"/>
+            <column name="email" value="nurlan.serikbayev@narxoz.kz"/>
+            <column name="password" value="$2a$10$N9qo8uLOickgx2ZMRZoMyeIjZAgcfl7p92ldGxad68LJZdL17lhWy"/> <!-- password: teacher2024 -->
+            <column name="full_name" value="Nurlan Serikbayev"/>
+            <column name="role" value="TEACHER"/>
+            <column name="created_at" valueDate="2023-09-05T10:30:00"/>
+        </insert>
+
+        <insert tableName="users">
+            <column name="id" value="3"/>
+            <column name="email" value="aigerim.zhakypova@narxoz.kz"/>
+            <column name="password" value="$2a$10$N9qo8uLOickgx2ZMRZoMyeIjZAgcfl7p92ldGxad68LJZdL17lhWy"/> <!-- password: teacher2024 -->
+            <column name="full_name" value="Aigerim Zhakypova"/>
+            <column name="role" value="TEACHER"/>
+            <column name="created_at" valueDate="2023-09-05T11:00:00"/>
+        </insert>
+
+        <insert tableName="users">
+            <column name="id" value="4"/>
+            <column name="email" value="marat.omarov@narxoz.kz"/>
+            <column name="password" value="$2a$10$N9qo8uLOickgx2ZMRZoMyeIjZAgcfl7p92ldGxad68LJZdL17lhWy"/> <!-- password: teacher2024 -->
+            <column name="full_name" value="Marat Omarov"/>
+            <column name="role" value="TEACHER"/>
+            <column name="created_at" valueDate="2023-09-06T09:15:00"/>
+        </insert>
+
+        <insert tableName="users">
+            <column name="id" value="5"/>
+            <column name="email" value="damir.mukanov@narxoz.kz"/>
+            <column name="password" value="$2a$10$N9qo8uLOickgx2ZMRZoMyeIjZAgcfl7p92ldGxad68LJZdL17lhWy"/> <!-- password: student2024 -->
+            <column name="full_name" value="Damir Mukanov"/>
+            <column name="role" value="STUDENT"/>
+            <column name="created_at" valueDate="2023-09-10T08:00:00"/>
+        </insert>
+
+        <insert tableName="users">
+            <column name="id" value="6"/>
+            <column name="email" value="zarina.abdullayeva@narxoz.kz"/>
+            <column name="password" value="$2a$10$N9qo8uLOickgx2ZMRZoMyeIjZAgcfl7p92ldGxad68LJZdL17lhWy"/> <!-- password: student2024 -->
+            <column name="full_name" value="Zarina Abdullayeva"/>
+            <column name="role" value="STUDENT"/>
+            <column name="created_at" valueDate="2023-09-10T08:20:00"/>
+        </insert>
+
+        <insert tableName="users">
+            <column name="id" value="7"/>
+            <column name="email" value="yerlan.smagul@narxoz.kz"/>
+            <column name="password" value="$2a$10$N9qo8uLOickgx2ZMRZoMyeIjZAgcfl7p92ldGxad68LJZdL17lhWy"/> <!-- password: student2024 -->
+            <column name="full_name" value="Yerlan Smagul"/>
+            <column name="role" value="STUDENT"/>
+            <column name="created_at" valueDate="2023-09-10T08:45:00"/>
+        </insert>
+
+        <insert tableName="users">
+            <column name="id" value="8"/>
+            <column name="email" value="ayaulym.kassymova@narxoz.kz"/>
+            <column name="password" value="$2a$10$N9qo8uLOickgx2ZMRZoMyeIjZAgcfl7p92ldGxad68LJZdL17lhWy"/> <!-- password: student2024 -->
+            <column name="full_name" value="Ayaulym Kassymova"/>
+            <column name="role" value="STUDENT"/>
+            <column name="created_at" valueDate="2024-09-01T09:00:00"/>
+        </insert>
+
+        <insert tableName="users">
+            <column name="id" value="9"/>
+            <column name="email" value="bekzat.aitzhanov@narxoz.kz"/>
+            <column name="password" value="$2a$10$N9qo8uLOickgx2ZMRZoMyeIjZAgcfl7p92ldGxad68LJZdL17lhWy"/> <!-- password: student2024 -->
+            <column name="full_name" value="Bekzat Aitzhanov"/>
+            <column name="role" value="STUDENT"/>
+            <column name="created_at" valueDate="2024-09-01T09:30:00"/>
+        </insert>
+    </changeSet>
+
+</databaseChangeLog>

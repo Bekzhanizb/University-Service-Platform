@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.20.xsd">
+
+    <changeSet id="013-insert-categories" author="bekezhan">
+        <insert tableName="service_categories">
+            <column name="id" value="1"/>
+            <column name="name" value="Academic Certificate Request"/>
+            <column name="description" value="Request for enrollment certificate, academic transcript, or diploma copy"/>
+        </insert>
+
+        <insert tableName="service_categories">
+            <column name="id" value="2"/>
+            <column name="name" value="Academic Advisor Consultation"/>
+            <column name="description" value="Schedule meeting with academic advisor for course planning and academic guidance"/>
+        </insert>
+
+        <insert tableName="service_categories">
+            <column name="id" value="3"/>
+            <column name="name" value="Course Registration Issue"/>
+            <column name="description" value="Problems with online course registration, prerequisites, or schedule conflicts"/>
+        </insert>
+
+        <insert tableName="service_categories">
+            <column name="id" value="4"/>
+            <column name="name" value="Dormitory Services"/>
+            <column name="description" value="Dormitory accommodation requests, room change, or maintenance issues"/>
+        </insert>
+
+        <insert tableName="service_categories">
+            <column name="id" value="5"/>
+            <column name="name" value="Scholarship and Financial Aid"/>
+            <column name="description" value="Questions about scholarships, grants, tuition payment, and financial assistance"/>
+        </insert>
+
+        <insert tableName="service_categories">
+            <column name="id" value="6"/>
+            <column name="name" value="Library Services"/>
+            <column name="description" value="Book reservation, library card issues, or database access problems"/>
+        </insert>
+    </changeSet>
+
+</databaseChangeLog>

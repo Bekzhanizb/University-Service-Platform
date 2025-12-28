@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.20.xsd">
+
+    <changeSet id="015-insert-events" author="bekezhan">
+        <insert tableName="university_events">
+            <column name="id" value="1"/>
+            <column name="title" value="IT Career Fair 2024 - Meet Leading Tech Companies"/>
+            <column name="description" value="Annual career fair featuring top Kazakhstan and international tech companies including Kaspi.kz, Halyk Bank, Chocofamily, EPAM, and others. Great opportunity for internships and full-time positions. Bring your CV and be ready for on-spot interviews!"/>
+            <column name="start_date" valueDate="2024-12-20T10:00:00"/>
+            <column name="end_date" valueDate="2024-12-20T18:00:00"/>
+            <column name="created_by" value="1"/>
+        </insert>
+
+        <insert tableName="university_events">
+            <column name="id" value="2"/>
+            <column name="title" value="Machine Learning Workshop: From Theory to Practice"/>
+            <column name="description" value="Hands-on workshop covering fundamentals of machine learning, neural networks, and practical applications using Python and TensorFlow. Led by Professor Aigerim Zhakypova. Topics include: supervised learning, deep learning basics, and real-world case studies. Laptops required."/>
+            <column name="start_date" valueDate="2024-12-22T14:00:00"/>
+            <column name="end_date" valueDate="2024-12-22T17:00:00"/>
+            <column name="created_by" value="3"/>
+        </insert>
+
+        <insert tableName="university_events">
+            <column name="id" value="3"/>
+            <column name="title" value="New Year Celebration - Winter Festival 2024"/>
+            <column name="description" value="Join us for the annual New Year celebration! Evening includes: student performances, live music, traditional Kazakh games, prize drawings, and festive dinner. Dress code: smart casual or traditional attire. Limited seats - register early!"/>
+            <column name="start_date" valueDate="2024-12-28T18:00:00"/>
+            <column name="end_date" valueDate="2024-12-28T23:00:00"/>
+            <column name="created_by" value="1"/>
+        </insert>
+
+        <insert tableName="university_events">
+            <column name="id" value="4"/>
+            <column name="title" value="Hackathon 2025: Build the Future"/>
+            <column name="description" value="48-hour hackathon challenging students to create innovative solutions for real-world problems. Categories: Mobile Apps, Web Development, AI/ML, IoT. Prizes: 1st place - 500,000 KZT, 2nd - 300,000 KZT, 3rd - 150,000 KZT. Food and drinks provided. Form teams of 3-5 people."/>
+            <column name="start_date" valueDate="2025-01-15T09:00:00"/>
+            <column name="end_date" valueDate="2025-01-17T18:00:00"/>
+            <column name="created_by" value="2"/>
+        </insert>
+
+        <insert tableName="university_events">
+            <column name="id" value="5"/>
+            <column name="title" value="Study Abroad Information Session"/>
+            <column name="description" value="Learn about student exchange programs and study abroad opportunities in Europe, Asia, and USA. Representatives from partner universities will present available programs, scholarships, and application procedures. Q&A session included. Perfect for students planning international experience."/>
+            <column name="start_date" valueDate="2025-01-25T15:00:00"/>
+            <column name="end_date" valueDate="2025-01-25T17:00:00"/>
+            <column name="created_by" value="1"/>
+        </insert>
+
+        <insert tableName="event_participants">
+            <column name="id" value="1"/>
+            <column name="event_id" value="1"/>
+            <column name="user_id" value="5"/>
+            <column name="status" value="REGISTERED"/>
+        </insert>
+
+        <insert tableName="event_participants">
+            <column name="id" value="2"/>
+            <column name="event_id" value="1"/>
+            <column name="user_id" value="6"/>
+            <column name="status" value="REGISTERED"/>
+        </insert>
+
+        <insert tableName="event_participants">
+            <column name="id" value="3"/>
+            <column name="event_id" value="1"/>
+            <column name="user_id" value="7"/>
+            <column name="status" value="REGISTERED"/>
+        </insert>
+
+        <insert tableName="event_participants">
+            <column name="id" value="4"/>
+            <column name="event_id" value="2"/>
+            <column name="user_id" value="5"/>
+            <column name="status" value="ATTENDED"/>
+        </insert>
+
+        <insert tableName="event_participants">
+            <column name="id" value="5"/>
+            <column name="event_id" value="2"/>
+            <column name="user_id" value="8"/>
+            <column name="status" value="ATTENDED"/>
+        </insert>
+
+        <insert tableName="event_participants">
+            <column name="id" value="6"/>
+            <column name="event_id" value="3"/>
+            <column name="user_id" value="6"/>
+            <column name="status" value="REGISTERED"/>
+        </insert>
+
+        <insert tableName="event_participants">
+            <column name="id" value="7"/>
+            <column name="event_id" value="3"/>

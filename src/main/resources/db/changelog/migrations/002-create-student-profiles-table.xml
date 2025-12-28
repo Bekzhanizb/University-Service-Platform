@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.20.xsd">
+
+    <changeSet id="002-create-student-profiles-table" author="bekezhan">
+        <createTable tableName="student_profiles">
+            <column name="id" type="BIGINT" autoIncrement="true">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="user_id" type="BIGINT">
+                <constraints nullable="false" unique="true"/>
+            </column>
+            <column name="student_code" type="VARCHAR(100)">
+                <constraints unique="true"/>
+            </column>
+            <column name="faculty" type="VARCHAR(255)"/>
+            <column name="course" type="INT"/>
+            <column name="group_name" type="VARCHAR(100)"/>
+        </createTable>
+
+        <addForeignKeyConstraint
+                baseTableName="student_profiles"
+                baseColumnNames="user_id"
+                constraintName="fk_student_profiles_user_id"
+                referencedTableName="users"
+                referencedColumnNames="id"
+                onDelete="CASCADE"/>
+    </changeSet>
+
+</databaseChangeLog>

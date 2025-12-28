@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.20.xsd">
+
+    <changeSet id="012-insert-profiles" author="bekezhan">
+        <insert tableName="teacher_profiles">
+            <column name="id" value="1"/>
+            <column name="user_id" value="2"/>
+            <column name="department" value="Department of Computer Science"/>
+            <column name="academic_title" value="Associate Professor, PhD"/>
+        </insert>
+
+        <insert tableName="teacher_profiles">
+            <column name="id" value="2"/>
+            <column name="user_id" value="3"/>
+            <column name="department" value="Department of Mathematics and Statistics"/>
+            <column name="academic_title" value="Professor, Doctor of Sciences"/>
+        </insert>
+
+        <insert tableName="teacher_profiles">
+            <column name="id" value="3"/>
+            <column name="user_id" value="4"/>
+            <column name="department" value="Department of Software Engineering"/>
+            <column name="academic_title" value="Senior Lecturer, PhD"/>
+        </insert>
+
+        <insert tableName="student_profiles">
+            <column name="id" value="1"/>
+            <column name="user_id" value="5"/>
+            <column name="student_code" value="21B030341"/>
+            <column name="faculty" value="Faculty of Information Technologies"/>
+            <column name="course" value="4"/>
+            <column name="group_name" value="IT-2101"/>
+        </insert>
+
+        <insert tableName="student_profiles">
+            <column name="id" value="2"/>
+            <column name="user_id" value="6"/>
+            <column name="student_code" value="21B030489"/>
+            <column name="faculty" value="Faculty of Information Technologies"/>
+            <column name="course" value="4"/>
+            <column name="group_name" value="IT-2101"/>
+        </insert>
+
+        <insert tableName="student_profiles">
+            <column name="id" value="3"/>
+            <column name="user_id" value="7"/>
+            <column name="student_code" value="21B030512"/>
+            <column name="faculty" value="Faculty of Information Technologies"/>
+            <column name="course" value="4"/>
+            <column name="group_name" value="IT-2102"/>
+        </insert>
+
+        <insert tableName="student_profiles">
+            <column name="id" value="4"/>
+            <column name="user_id" value="8"/>
+            <column name="student_code" value="22B030267"/>
+            <column name="faculty" value="Faculty of Information Technologies"/>
+            <column name="course" value="3"/>
+            <column name="group_name" value="IT-2201"/>
+        </insert>
+
+        <insert tableName="student_profiles">
+            <column name="id" value="5"/>
+            <column name="user_id" value="9"/>
+            <column name="student_code" value="22B030398"/>
+            <column name="faculty" value="Faculty of Information Technologies"/>
+            <column name="course" value="3"/>
+            <column name="group_name" value="IT-2201"/>
+        </insert>
+    </changeSet>
+
+</databaseChangeLog>
