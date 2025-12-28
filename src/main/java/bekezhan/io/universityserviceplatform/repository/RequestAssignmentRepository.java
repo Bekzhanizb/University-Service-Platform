@@ -9,4 +9,5 @@ import java.util.Optional;
 @Repository
 public interface RequestAssignmentRepository extends JpaRepository<RequestAssignment, Long> {
     Optional<RequestAssignment> findByRequestId(Long requestId);
+    boolean existsByRequestId(Long id);
 }
