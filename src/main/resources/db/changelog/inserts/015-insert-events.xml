@@ -96,3 +96,29 @@
         <insert tableName="event_participants">
             <column name="id" value="7"/>
             <column name="event_id" value="3"/>
+            <column name="user_id" value="7"/>
+            <column name="status" value="REGISTERED"/>
+        </insert>
+
+        <insert tableName="event_participants">
+            <column name="id" value="8"/>
+            <column name="event_id" value="3"/>
+            <column name="user_id" value="9"/>
+            <column name="status" value="REGISTERED"/>
+        </insert>
+
+        <insert tableName="event_participants">
+            <column name="id" value="9"/>
+            <column name="event_id" value="4"/>
+            <column name="user_id" value="5"/>
+            <column name="status" value="REGISTERED"/>
+        </insert>
+
+        <insert tableName="event_participants">
+            <column name="id" value="10"/>
+            <column name="event_id" value="4"/>
+            <column name="user_id" value="9"/>
+            <column name="status" value="REGISTERED"/>
+        </insert>
+    </changeSet>
+</databaseChangeLog>
