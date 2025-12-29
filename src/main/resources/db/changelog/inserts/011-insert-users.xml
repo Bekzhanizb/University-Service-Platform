@@ -18,7 +18,7 @@
         <insert tableName="users">
             <column name="id" value="2"/>
             <column name="email" value="nurlan.serikbayev@univer.kz"/>
-            <column name="password" value="$2a$10$N9qo8uLOickgx2ZMRZoMyeIjZAgcfl7p92ldGxad68LJZdL17lhWy"/> <!-- password: teacher2024 -->
+            <column name="password" value="$2a$10$N9qo8uLOickgx2ZMRZoMyeIjZAgcfl7p92ldGxad68LJZdL17lhWy"/>
             <column name="full_name" value="Nurlan Serikbayev"/>
             <column name="role" value="TEACHER"/>
             <column name="created_at" valueDate="2023-09-05T10:30:00"/>
@@ -27,7 +27,7 @@
         <insert tableName="users">
             <column name="id" value="3"/>
             <column name="email" value="aigerim.zhakypova@univer.kz"/>
-            <column name="password" value="$2a$10$N9qo8uLOickgx2ZMRZoMyeIjZAgcfl7p92ldGxad68LJZdL17lhWy"/> <!-- password: teacher2024 -->
+            <column name="password" value="$2a$10$N9qo8uLOickgx2ZMRZoMyeIjZAgcfl7p92ldGxad68LJZdL17lhWy"/>
             <column name="full_name" value="Aigerim Zhakypova"/>
             <column name="role" value="TEACHER"/>
             <column name="created_at" valueDate="2023-09-05T11:00:00"/>
@@ -36,7 +36,7 @@
         <insert tableName="users">
             <column name="id" value="4"/>
             <column name="email" value="marat.omarov@univer.kz"/>
-            <column name="password" value="$2a$10$N9qo8uLOickgx2ZMRZoMyeIjZAgcfl7p92ldGxad68LJZdL17lhWy"/> <!-- password: teacher2024 -->
+            <column name="password" value="$2a$10$N9qo8uLOickgx2ZMRZoMyeIjZAgcfl7p92ldGxad68LJZdL17lhWy"/>
             <column name="full_name" value="Marat Omarov"/>
             <column name="role" value="TEACHER"/>
             <column name="created_at" valueDate="2023-09-06T09:15:00"/>
@@ -45,7 +45,7 @@
         <insert tableName="users">
             <column name="id" value="5"/>
             <column name="email" value="damir.mukanov@univer.kz"/>
-            <column name="password" value="$2a$10$N9qo8uLOickgx2ZMRZoMyeIjZAgcfl7p92ldGxad68LJZdL17lhWy"/> <!-- password: student2024 -->
+            <column name="password" value="$2a$10$N9qo8uLOickgx2ZMRZoMyeIjZAgcfl7p92ldGxad68LJZdL17lhWy"/>
             <column name="full_name" value="Damir Mukanov"/>
             <column name="role" value="STUDENT"/>
             <column name="created_at" valueDate="2023-09-10T08:00:00"/>
@@ -54,7 +54,7 @@
         <insert tableName="users">
             <column name="id" value="6"/>
             <column name="email" value="zarina.abdullayeva@univer.kz"/>
-            <column name="password" value="$2a$10$N9qo8uLOickgx2ZMRZoMyeIjZAgcfl7p92ldGxad68LJZdL17lhWy"/> <!-- password: student2024 -->
+            <column name="password" value="$2a$10$N9qo8uLOickgx2ZMRZoMyeIjZAgcfl7p92ldGxad68LJZdL17lhWy"/>
             <column name="full_name" value="Zarina Abdullayeva"/>
             <column name="role" value="STUDENT"/>
             <column name="created_at" valueDate="2023-09-10T08:20:00"/>
@@ -63,7 +63,7 @@
         <insert tableName="users">
             <column name="id" value="7"/>
             <column name="email" value="yerlan.smagul@univer.kz"/>
-            <column name="password" value="$2a$10$N9qo8uLOickgx2ZMRZoMyeIjZAgcfl7p92ldGxad68LJZdL17lhWy"/> <!-- password: student2024 -->
+            <column name="password" value="$2a$10$N9qo8uLOickgx2ZMRZoMyeIjZAgcfl7p92ldGxad68LJZdL17lhWy"/>
             <column name="full_name" value="Yerlan Smagul"/>
             <column name="role" value="STUDENT"/>
             <column name="created_at" valueDate="2023-09-10T08:45:00"/>
@@ -72,7 +72,7 @@
         <insert tableName="users">
             <column name="id" value="8"/>
             <column name="email" value="ayaulym.kassymova@univer.kz"/>
-            <column name="password" value="$2a$10$N9qo8uLOickgx2ZMRZoMyeIjZAgcfl7p92ldGxad68LJZdL17lhWy"/> <!-- password: student2024 -->
+            <column name="password" value="$2a$10$N9qo8uLOickgx2ZMRZoMyeIjZAgcfl7p92ldGxad68LJZdL17lhWy"/>
             <column name="full_name" value="Ayaulym Kassymova"/>
             <column name="role" value="STUDENT"/>
             <column name="created_at" valueDate="2024-09-01T09:00:00"/>
@@ -81,7 +81,7 @@
         <insert tableName="users">
             <column name="id" value="9"/>
             <column name="email" value="bekzat.aitzhanov@univer.kz"/>
-            <column name="password" value="$2a$10$N9qo8uLOickgx2ZMRZoMyeIjZAgcfl7p92ldGxad68LJZdL17lhWy"/> <!-- password: student2024 -->
+            <column name="password" value="$2a$10$N9qo8uLOickgx2ZMRZoMyeIjZAgcfl7p92ldGxad68LJZdL17lhWy"/>
             <column name="full_name" value="Bekzat Aitzhanov"/>
             <column name="role" value="STUDENT"/>
             <column name="created_at" valueDate="2024-09-01T09:30:00"/>
