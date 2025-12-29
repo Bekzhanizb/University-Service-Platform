@@ -15,7 +15,7 @@ public class JwtProvider {
 
     private final Key key = Keys.secretKeyFor(SignatureAlgorithm.HS256);
 
-    @Value("${jwt.expiration:3600000}")
+    @Value("${jwt.expiration:86400000}")
     private long expiration;
 
     public String generateToken(String email) {

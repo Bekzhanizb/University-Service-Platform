@@ -16,20 +16,26 @@ import org.springframework.stereotype.Component;
 import org.springframework.web.filter.OncePerRequestFilter;
 
 import java.io.IOException;
-import java.util.Collections;
 
 @Component
 @RequiredArgsConstructor
 public class JwtFilter extends OncePerRequestFilter {
 
     private final JwtProvider jwtProvider;
-     private final UserServiceImpl userService;
+    private final UserServiceImpl userService;
 
     @Override
-    protected void doFilterInternal(HttpServletRequest request,
-                                    HttpServletResponse response,
-                                    FilterChain filterChain)
-            throws ServletException, IOException {
+    protected boolean shouldNotFilter(HttpServletRequest request) {
+        String path = request.getServletPath();
+        return path.equals("/api/auth/login") || path.equals("/api/auth/register");
+    }
+
+    @Override
+    protected void doFilterInternal(
+            HttpServletRequest request,
+            HttpServletResponse response,
+            FilterChain filterChain
+    ) throws ServletException, IOException {
 
         String token = extractToken(request);
 
@@ -40,21 +46,31 @@ public class JwtFilter extends OncePerRequestFilter {
                 User user = userService.findByEmail(email);
 
                 if (user != null) {
-                    UserDetails userDetails = org.springframework.security.core.userdetails.User
-                            .builder()
-                            .username(user.getEmail())
-                            .password(user.getPassword())
-                            .authorities(Collections.singletonList(
-                                    new SimpleGrantedAuthority("ROLE_" + user.getRole().name())))
-                            .build();
+                    UserDetails userDetails =
+                            org.springframework.security.core.userdetails.User
+                                    .builder()
+                                    .username(user.getEmail())
+                                    .password(user.getPassword())
+                                    .authorities(
+                                            new SimpleGrantedAuthority(
+                                                    "ROLE_" + user.getRole().name()
+                                            )
+                                    )
+                                    .build();
 
                     UsernamePasswordAuthenticationToken authentication =
                             new UsernamePasswordAuthenticationToken(
-                                    userDetails, null, userDetails.getAuthorities());
+                                    userDetails,
+                                    null,
+                                    userDetails.getAuthorities()
+                            );
 
-                    authentication.setDetails(new WebAuthenticationDetailsSource().buildDetails(request));
+                    authentication.setDetails(
+                            new WebAuthenticationDetailsSource().buildDetails(request)
+                    );
 
-                    SecurityContextHolder.getContext().setAuthentication(authentication);
+                    SecurityContextHolder.getContext()
+                            .setAuthentication(authentication);
                 }
             }
         }

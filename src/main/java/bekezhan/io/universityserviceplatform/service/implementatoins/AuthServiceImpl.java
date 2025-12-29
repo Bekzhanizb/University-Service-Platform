@@ -10,8 +10,6 @@ import bekezhan.io.universityserviceplatform.repository.UserRepository;
 import bekezhan.io.universityserviceplatform.security.JwtProvider;
 import bekezhan.io.universityserviceplatform.service.AuthService;
 import lombok.RequiredArgsConstructor;
-import org.springframework.security.authentication.AuthenticationManager;
-import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
@@ -29,7 +27,6 @@ public class AuthServiceImpl implements AuthService {
     private final UserMapper userMapper;
     private final PasswordEncoder passwordEncoder;
     private final JwtProvider jwtProvider;
-    private final AuthenticationManager authenticationManager;
 
     @Override
     @Transactional
@@ -48,13 +45,17 @@ public class AuthServiceImpl implements AuthService {
 
     @Override
     public String login(String email, String password) {
-        Authentication authentication = authenticationManager.authenticate(
-                new UsernamePasswordAuthenticationToken(email, password)
-        );
 
-        SecurityContextHolder.getContext().setAuthentication(authentication);
-        return jwtProvider.generateToken(email);
+        User user = userRepository.findByEmail(email)
+                .orElseThrow(() -> new UsernameNotFoundException("User not found"));
+
+        if (!passwordEncoder.matches(password, user.getPassword())) {
+            throw new RuntimeException("Invalid credentials");
+        }
+
+        return jwtProvider.generateToken(user.getEmail());
     }
+
 
     @Override
     public User getCurrentUser() {

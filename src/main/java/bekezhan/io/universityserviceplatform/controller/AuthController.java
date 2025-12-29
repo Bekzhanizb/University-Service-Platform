@@ -41,7 +41,6 @@ public class AuthController {
         );
     }
 
-    // НОВЫЕ ENDPOINTS
     @PutMapping("/change-password")
     public ResponseEntity<Void> changePassword(@RequestBody ChangePasswordRequestDTO dto) {
         authService.changePassword(dto);
